@@ -1,6 +1,9 @@
-package Controller;
+package controller;
 
-import Database.DbConnection;
+import database.DbConnection;
+
+import java.sql.ResultSet;
+
 import Model.Student;
 
 public class StudentController {
@@ -24,5 +27,31 @@ public class StudentController {
         dbConnection = new DbConnection();
         int result = dbConnection.manipulate(insertQuery);
         return result;
+    }
+
+    public ResultSet login(Student student) {
+        String email = student.getEmail();
+        String pass = student.getPassword();
+        String selectQuery = "select * from students where email='" + email + "' and password='" + pass + "'";
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(selectQuery);
+        return result;
+    }
+
+    public int changeStatus(Student student) {
+        String updateQuery = "update students set status='" + "inactive" + "' where status='" + "active" + "'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(updateQuery);
+        return result;
+
+    }
+
+    public int updateStatus(Student student) {
+        String email = student.getEmail();
+        String updateQuery = "update students set status='" + "active" + "' where email='" + email + "'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(updateQuery);
+        return result;
+
     }
 }
