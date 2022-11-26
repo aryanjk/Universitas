@@ -5,11 +5,14 @@
 package database;
 import java.sql.*;
 
-
-public class DbConnection {
+/**
+ *
+ * @author ujjwalpariyar
+ */
+public class database {
     public Connection con;
             
-    public static void main(String[] args){
+    public static Connection connectdb(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://sql6.freesqldatabase.com:3306/sql6580070","sql6580070","6VVrAkhI5w");
@@ -23,6 +26,10 @@ public class DbConnection {
             System.out.println("Not connected");
             
         }
+        return null;
+    }
+    public static void main(String[] args) {
+        database.connectdb();
     }
     
     
