@@ -1,35 +1,28 @@
-package controller;
+package Controller;
 
-import database.DbConnection;
-import models.Student;
+import Database.DbConnection;
+import Model.Student;
 
 public class StudentController {
     DbConnection dbConnection;
 
-    public int insertStudent(Student student) {
-        int id = student.getStd_id();
-        String name = student.getStd_name();
-        String address = student.getStd_address();
-        int age = student.getStd_age();
-        int contact = student.getStd_contacr();
-        String insertQuery = String.format(
-                "insert into tbl_student(std_id,std_name,std_age,std_address,std_contacr) values(%d,'%s',%d,'%s',%d)",
-                id,
-                name, age, address, contact);
-        System.out.println(insertQuery);
+    public int insertdetails(Student student) {
+        String fname = student.getF_name();
+        String lname = student.getL_name();
+        String email = student.getEmail();
+        String contact = student.getParent_contact();
+        String parents_name = student.getParents_name();
+        String parents_contact = student.getParent_contact();
+        String pass = student.getPassword();
+        String dob = student.getDob();
+        String security_qn = student.getSecurity_qn();
+        String security_ans = student.getSecurity_ans();
+
+        String insertQuery = "insert into students(f_name,l_name,email,std_contact,parents_name,parent_contact,password,dob,security_qn,security_ans)"
+                + "values('" + fname + "','" + lname + "','" + email + "','" + contact + "','" + parents_name + "','"
+                + parents_contact + "','" + pass + "','" + dob + "','" + security_qn + "','" + security_ans + "')";
         dbConnection = new DbConnection();
         int result = dbConnection.manipulate(insertQuery);
         return result;
     }
-
-    public int updateStudent(Student student) {
-        int id = student.getStd_id();
-        String name = student.getStd_name();
-        String updateQuery = String.format(
-                "update tbl_student set std_name='%s' where std_id = %d", name, id);
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(updateQuery);
-        return result;
-    }
-
 }
