@@ -40,7 +40,6 @@ public class exam_schedule extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1512, 982));
         setMinimumSize(new java.awt.Dimension(1512, 982));
         getContentPane().setLayout(null);
 
@@ -130,8 +129,13 @@ public class exam_schedule extends javax.swing.JFrame {
 
         calandar.setDecorationBackgroundColor(new java.awt.Color(134, 204, 252));
         calandar.setWeekOfYearVisible(false);
+        calandar.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                calandarComponentAdded(evt);
+            }
+        });
         getContentPane().add(calandar);
-        calandar.setBounds(200, 190, 1140, 590);
+        calandar.setBounds(200, 190, 650, 590);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bg.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -167,6 +171,10 @@ public class exam_schedule extends javax.swing.JFrame {
     private void calandar_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calandar_btnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_calandar_btnActionPerformed
+
+    private void calandarComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_calandarComponentAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_calandarComponentAdded
 
     /**
      * @param args the command line arguments
