@@ -7,7 +7,7 @@ import Model.Student;
 
 public class test {
     public static void main(String[] args) {
-        Student s1 = new Student(null, null, null, null, null, null, null, null, null, null);
+        Student s1 = new Student( );
         StudentController sc  = new StudentController();
         int result = sc.insertdetails(s1);
         if(result>0){
