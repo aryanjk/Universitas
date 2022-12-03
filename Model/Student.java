@@ -1,5 +1,7 @@
 package Model;
 
+import javax.swing.JTextField;
+
 public class Student{
     // creation of instance variable
 	
@@ -16,7 +18,7 @@ public class Student{
 	private String security_qn;
 	private String security_ans;
 
-	public Student(String f_name, String l_name, String email, String std_contact, String parents_name, String parent_contact, String password, String dob, String security_qn, String security_ans) {
+	public Student(String f_name, String l_name, String email, String std_contact, String parents_name, String parent_contact, String password, String string, String security_qn, String security_ans) {
 		this.f_name = f_name;
 		this.l_name = l_name;
 		this.email = email;
