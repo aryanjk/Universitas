@@ -1,10 +1,6 @@
 package database;
 import java.sql.*;
 
-/**
- *
- * @author ujjwalpariyar
- */
 public class DbConnection{
     public Connection con;
             
