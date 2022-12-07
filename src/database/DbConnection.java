@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package database;
 import java.sql.*;
 
-/**
- *
- * @author ujjwalpariyar
- */
-public class data{
+public class DbConnection{
     public Connection con;
             
     public static Connection connectdb(){
@@ -29,7 +21,7 @@ public class data{
         return null;
     }
     public static void main(String[] args) {
-        data.connectdb();
+        DbConnection.connectdb();
     }
     
     
