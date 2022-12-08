@@ -4,6 +4,11 @@
  */
 package View;
 import javax.swing.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+
+import java.sql.PreparedStatement;
 
 /**
  *
@@ -41,6 +46,8 @@ public class Updatedata extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -93,7 +100,7 @@ public class Updatedata extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Old Password");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(440, 270, 110, 20);
+        jLabel7.setBounds(440, 340, 110, 20);
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,13 +108,13 @@ public class Updatedata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(440, 300, 480, 30);
+        jTextField3.setBounds(440, 370, 480, 30);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("New Password");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(440, 350, 90, 20);
+        jLabel8.setBounds(440, 420, 90, 20);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,15 +122,15 @@ public class Updatedata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(440, 380, 210, 30);
+        jTextField4.setBounds(440, 450, 210, 30);
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Confirm Password");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(710, 350, 130, 20);
+        jLabel9.setBounds(710, 420, 130, 20);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(710, 380, 210, 30);
+        jTextField5.setBounds(710, 450, 210, 30);
 
         jButton1.setText("Update");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +139,22 @@ public class Updatedata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(640, 470, 90, 30);
+        jButton1.setBounds(640, 530, 90, 30);
+
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Guardians Contact Number");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(440, 270, 180, 20);
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField6);
+        jTextField6.setBounds(440, 300, 480, 30);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -145,32 +167,50 @@ public class Updatedata extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
+        // 
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
+        // 
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
+        // 
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        // 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                if(jTextField1.getText().isEmpty() || jTextField2.getText().isEmpty() || jTextField3.getText().isEmpty()|| jTextField4.getText().isEmpty()|| jTextField5.getText().isEmpty() )
-        {
-            JOptionPane.showMessageDialog(null,"Please enter all fields");     
-        }  
-        else{
-                    JOptionPane.showMessageDialog(null,"Details updated.");   
-         
+                try{
+                    String value1=jTextField1.getText();
+                    String value2=jTextField2.getText();
+                    String value3=jTextField3.getText();
+                    String value4=jTextField4.getText();
+                    String value5=jTextField5.getText();
+                    String value6=jTextField6.getText();
+                    
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    Connection con=DriverManager.getConnection("jdbc:mysql://db4free.net:3306/universitas","universitas","Universitas121");
             
-        }
+                    
+                    String sql="update student set email='"+value1+"',std_contact='"+value2+"',password='"+value4+"',password='"+value5+"', parent_contact='"+value6+"' where email='"+value1+"'" ;
+                    PreparedStatement pst=con.prepareStatement(sql);
+                    pst.execute();
+                    JOptionPane.showMessageDialog(null,"Updated");
+                    
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(null,e);
+                    
+                }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // 
+    }//GEN-LAST:event_jTextField6ActionPerformed
 
 
     public static void main(String args[]) {
@@ -208,6 +248,7 @@ public class Updatedata extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -221,5 +262,6 @@ public class Updatedata extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
