@@ -46,11 +46,11 @@ public class SignUpJFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         f_name1 = new javax.swing.JTextField();
-        email = new javax.swing.JTextField();
-        std_contact = new javax.swing.JTextField();
-        l_name = new javax.swing.JTextField();
-        parents_name = new javax.swing.JTextField();
-        parent_contact = new javax.swing.JTextField();
+        email1 = new javax.swing.JTextField();
+        std_contact1 = new javax.swing.JTextField();
+        l_name1 = new javax.swing.JTextField();
+        parents_name1 = new javax.swing.JTextField();
+        parent_contact1 = new javax.swing.JTextField();
         firstname = new javax.swing.JLabel();
         lastname = new javax.swing.JLabel();
         femail = new javax.swing.JLabel();
@@ -63,7 +63,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
         g_name = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        security_ans = new javax.swing.JTextField();
+        security_ans1 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -71,12 +71,12 @@ public class SignUpJFrame extends javax.swing.JFrame {
         male = new javax.swing.JRadioButton();
         gender = new javax.swing.JLabel();
         others = new javax.swing.JRadioButton();
-        ConfirmPass = new javax.swing.JPasswordField();
-        password = new javax.swing.JPasswordField();
+        ConfirmPass1 = new javax.swing.JPasswordField();
+        password1 = new javax.swing.JPasswordField();
         dob1 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -119,39 +119,39 @@ public class SignUpJFrame extends javax.swing.JFrame {
         jPanel2.add(f_name1);
         f_name1.setBounds(0, 140, 240, 40);
 
-        email.addActionListener(new java.awt.event.ActionListener() {
+        email1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
+                email1ActionPerformed(evt);
             }
         });
-        jPanel2.add(email);
-        email.setBounds(0, 210, 240, 40);
-        jPanel2.add(std_contact);
-        std_contact.setBounds(270, 210, 250, 40);
+        jPanel2.add(email1);
+        email1.setBounds(0, 210, 240, 40);
+        jPanel2.add(std_contact1);
+        std_contact1.setBounds(270, 210, 250, 40);
 
-        l_name.addActionListener(new java.awt.event.ActionListener() {
+        l_name1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                l_nameActionPerformed(evt);
+                l_name1ActionPerformed(evt);
             }
         });
-        jPanel2.add(l_name);
-        l_name.setBounds(270, 140, 250, 40);
+        jPanel2.add(l_name1);
+        l_name1.setBounds(270, 140, 250, 40);
 
-        parents_name.addActionListener(new java.awt.event.ActionListener() {
+        parents_name1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                parents_nameActionPerformed(evt);
+                parents_name1ActionPerformed(evt);
             }
         });
-        jPanel2.add(parents_name);
-        parents_name.setBounds(0, 280, 240, 40);
+        jPanel2.add(parents_name1);
+        parents_name1.setBounds(0, 280, 240, 40);
 
-        parent_contact.addActionListener(new java.awt.event.ActionListener() {
+        parent_contact1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                parent_contactActionPerformed(evt);
+                parent_contact1ActionPerformed(evt);
             }
         });
-        jPanel2.add(parent_contact);
-        parent_contact.setBounds(270, 280, 250, 40);
+        jPanel2.add(parent_contact1);
+        parent_contact1.setBounds(270, 280, 250, 40);
 
         firstname.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         firstname.setText("First Name:");
@@ -222,13 +222,13 @@ public class SignUpJFrame extends javax.swing.JFrame {
         jPanel2.add(jLabel15);
         jLabel15.setBounds(120, 600, 230, 25);
 
-        security_ans.addActionListener(new java.awt.event.ActionListener() {
+        security_ans1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                security_ansActionPerformed(evt);
+                security_ans1ActionPerformed(evt);
             }
         });
-        jPanel2.add(security_ans);
-        security_ans.setBounds(320, 460, 200, 30);
+        jPanel2.add(security_ans1);
+        security_ans1.setBounds(320, 460, 200, 30);
 
         jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel16.setText("Ans:");
@@ -298,29 +298,35 @@ public class SignUpJFrame extends javax.swing.JFrame {
         jPanel2.add(jPanel3);
         jPanel3.setBounds(10, 468, 140, 100);
 
-        ConfirmPass.addActionListener(new java.awt.event.ActionListener() {
+        ConfirmPass1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConfirmPassActionPerformed(evt);
+                ConfirmPass1ActionPerformed(evt);
             }
         });
-        jPanel2.add(ConfirmPass);
-        ConfirmPass.setBounds(270, 350, 250, 40);
+        jPanel2.add(ConfirmPass1);
+        ConfirmPass1.setBounds(270, 350, 250, 40);
 
-        password.addActionListener(new java.awt.event.ActionListener() {
+        password1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordActionPerformed(evt);
+                password1ActionPerformed(evt);
             }
         });
-        jPanel2.add(password);
-        password.setBounds(0, 352, 240, 40);
+        jPanel2.add(password1);
+        password1.setBounds(0, 352, 240, 40);
+
+        dob1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dob1ActionPerformed(evt);
+            }
+        });
         jPanel2.add(dob1);
         dob1.setBounds(0, 420, 240, 40);
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText("What is your favorite colour?");
-
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Security Question:");
+
+        jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "What is your favorite colour?", "What is your Pet's name?", "What is your lucky number?" }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -328,17 +334,18 @@ public class SignUpJFrame extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -349,7 +356,6 @@ public class SignUpJFrame extends javax.swing.JFrame {
         jPanel2.setBounds(660, 30, 540, 580);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("Already have an account? Login");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(830, 650, 240, 20);
 
@@ -372,9 +378,9 @@ public class SignUpJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void security_ansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_security_ansActionPerformed
+    private void security_ans1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_security_ans1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_security_ansActionPerformed
+    }//GEN-LAST:event_security_ans1ActionPerformed
 
     private void femaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleActionPerformed
         // TODO add your handling code here:
@@ -387,60 +393,60 @@ public class SignUpJFrame extends javax.swing.JFrame {
     private void signupbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupbtnActionPerformed
         
         // String fname= f_name.getText();
-        String fname1 = f_name1.getText();
-        String lname = l_name.getText();
-        String email1 = email.getText();
-        String pass = new String(password.getPassword());
-        String repass = new String(ConfirmPass.getPassword());
-        String contact1 = contact.getText();
-        String parentsName = parents_name.getText();
-        String parentsContact = parent_contact.getText();
-        String dob1 = dob.getText();
-        String sq = null;
-        Object selectedItem   =security_qn.getSelectedItem();
-        if(selectedItem!=null){
-            sq = selectedItem.toString();
-        }
-        String gender = null;
-        if(male.isSelected()){
-            gender ="male";
-        }else if(female.isSelected()){
-            gender = "female";
-        }else{
-            gender="others";
-        }
-        String sq_ans = security_ans.getText();
-        Student s1 = new Student(fname1, lname, email1, contact1, parentsName, parentsContact, pass, dob1, sq, sq_ans);
+        String f_name = f_name1.getText();
+        String l_name = l_name1.getText();
+        String email = email1.getText();
+        String std_contact=std_contact1.getText();
+        String parents_name = parents_name1.getText();
+        String parent_contact = parent_contact1.getText();
+        String password = new String(password1.getPassword());
+        String C_pass = new String(ConfirmPass1.getPassword());
+        String dob = dob1.getText();
+        String security_qn = null;
+        String security_ans=security_ans1.getText();
+        // Object selectedItem   =security_qn.getSelectedItem();
+        // if(selectedItem!=null){
+        //     sq = selectedItem.toString();
+        // }
+//        String gender = null;
+//        if(male.isSelected()){
+//            gender ="male";
+//        }else if(female.isSelected()){
+//            gender = "female";
+//        }else{
+//            gender="others";
+//        }
+        Student s1 = new Student( f_name, l_name,  email,  std_contact,  parents_name, parent_contact,  password, C_pass,dob, security_qn, security_ans, security_ans);
         StudentController sc  = new StudentController();
         int result = sc.insertdetails(s1);
         if(result>0){
             JOptionPane.showMessageDialog(null, "Registered Successfully");
         }else{
             
-            JOptionPane.showMessageDialog(null, "Registered insSuccessfully");
+            JOptionPane.showMessageDialog(null, "Registered UnSuccessfully");
         }
               // TODO add your handling code here:
     }//GEN-LAST:event_signupbtnActionPerformed
 
-    private void parents_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parents_nameActionPerformed
+    private void parents_name1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parents_name1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_parents_nameActionPerformed
+    }//GEN-LAST:event_parents_name1ActionPerformed
 
-    private void l_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameActionPerformed
+    private void l_name1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_name1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_l_nameActionPerformed
+    }//GEN-LAST:event_l_name1ActionPerformed
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+    private void email1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_email1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
+    }//GEN-LAST:event_email1ActionPerformed
 
     private void f_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_f_nameActionPerformed
 
-    private void parent_contactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parent_contactActionPerformed
+    private void parent_contact1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parent_contact1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_parent_contactActionPerformed
+    }//GEN-LAST:event_parent_contact1ActionPerformed
 
     private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
         // TODO add your handling code here:
@@ -453,6 +459,10 @@ public class SignUpJFrame extends javax.swing.JFrame {
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void dob1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dob1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dob1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -490,7 +500,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField ConfirmPass;
+    private javax.swing.JPasswordField ConfirmPass1;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -498,20 +508,20 @@ public class SignUpJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel contact;
     private javax.swing.JLabel dateofbirth;
     private javax.swing.JTextField dob1;
-    private javax.swing.JTextField email;
+    private javax.swing.JTextField email1;
     private javax.swing.JTextField f_name1;
     private javax.swing.JLabel femail;
     private javax.swing.JRadioButton female;
     private javax.swing.JLabel firstname;
     private javax.swing.JLabel g_name;
     private javax.swing.JLabel gender;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu3;
@@ -527,16 +537,16 @@ public class SignUpJFrame extends javax.swing.JFrame {
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem3;
-    private javax.swing.JTextField l_name;
+    private javax.swing.JTextField l_name1;
     private javax.swing.JLabel lastname;
     private javax.swing.JRadioButton male;
     private javax.swing.JRadioButton others;
-    private javax.swing.JTextField parent_contact;
-    private javax.swing.JTextField parents_name;
-    private javax.swing.JPasswordField password;
+    private javax.swing.JTextField parent_contact1;
+    private javax.swing.JTextField parents_name1;
     private javax.swing.JLabel password01;
-    private javax.swing.JTextField security_ans;
+    private javax.swing.JPasswordField password1;
+    private javax.swing.JTextField security_ans1;
     private javax.swing.JButton signupbtn;
-    private javax.swing.JTextField std_contact;
+    private javax.swing.JTextField std_contact1;
     // End of variables declaration//GEN-END:variables
 }
