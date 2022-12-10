@@ -27,19 +27,109 @@ public class queries extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        BGimg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1512, 982));
         setMinimumSize(new java.awt.Dimension(1512, 982));
         setPreferredSize(new java.awt.Dimension(1512, 982));
         getContentPane().setLayout(null);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\queries\\src\\queries.png")); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(1512, 982));
-        jLabel1.setMinimumSize(new java.awt.Dimension(1512, 982));
-        jLabel1.setPreferredSize(new java.awt.Dimension(1512, 982));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1260, 730);
+        jLabel1.setBounds(640, 610, 0, 0);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\queries\\src\\phone 1.png")); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(180, 560, 130, 140);
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel3.setText("Phone number");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(170, 700, 160, 30);
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel4.setText("+977 9803155097");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(160, 750, 200, 30);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\queries\\src\\eee 1.png")); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(580, 580, 170, 120);
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel6.setText("Email");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(630, 710, 140, 29);
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel7.setText("Softwarica@gmail.com");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(540, 750, 270, 29);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\queries\\src\\logo 1.png")); // NOI18N
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(20, 10, 260, 60);
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel9.setText("We’re a university where curiosity prevails, and where exploring new ways of thinking");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(20, 90, 880, 70);
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel10.setText("and pushing boundaries, isn’t just encouraged, it’s expected.");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(20, 160, 770, 30);
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel11.setText("We are determined to do things differently and put student success at");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(20, 200, 850, 50);
+
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel12.setText("the centre of everything we do.");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(20, 240, 760, 70);
+
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel13.setText("We're committed to two things: excellence in teaching and excellence in research.");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(20, 290, 870, 70);
+
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel14.setText("We put student success at the heart of our mission, supporting every student");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(20, 350, 850, 50);
+
+        jLabel15.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel15.setText("from every background to achieve outstanding outcomes; ");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(20, 400, 810, 50);
+
+        jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel16.setText("preparing our students to thrive in their future lives.");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(20, 446, 770, 40);
+
+        BGimg.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\queries\\src\\queries.png")); // NOI18N
+        BGimg.setMaximumSize(new java.awt.Dimension(1512, 982));
+        BGimg.setMinimumSize(new java.awt.Dimension(1512, 982));
+        BGimg.setPreferredSize(new java.awt.Dimension(1512, 982));
+        getContentPane().add(BGimg);
+        BGimg.setBounds(10, -40, 1512, 982);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -80,6 +170,22 @@ public class queries extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BGimg;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
