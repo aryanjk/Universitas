@@ -43,7 +43,6 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -55,6 +54,7 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1512, 980));
@@ -108,7 +108,7 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel21.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel21.setText("Suspension for 2 days.");
+        jLabel21.setText("♦ Suspension for 2 days.");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -130,7 +130,7 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel19.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel19.setText("Restricted.");
+        jLabel19.setText("♦ Restricted.");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -150,13 +150,13 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
         );
 
         jLabel17.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel17.setText("Warning letter will be issued for the first 2 times. (Suspension after the 3rd time)");
+        jLabel17.setText("♦ Warning letter will be issued for the first 2 times. (Suspension after 3rd time)");
 
         jLabel18.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel18.setText("Suspension for a week. The student will be allowed to take regular classes only ");
+        jLabel18.setText("♦ Suspension for a week. The student will be allowed to take regular classes only ");
 
         jLabel20.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel20.setText("after consulting with the parents/guardians.");
+        jLabel20.setText("♦ after consulting with the parents/guardians.");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -167,7 +167,7 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel18)
@@ -198,21 +198,17 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
         jPanel5.setLayout(null);
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel9.setText("Use of electronic gadgets in the classroom environment.");
+        jLabel9.setText("♦ Use of electronic gadgets in the classroom environment.");
         jPanel5.add(jLabel9);
         jLabel9.setBounds(10, 30, 360, 20);
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel10.setText("Chewing of gums and use of tobacco within the college premises.  ");
+        jLabel10.setText("♦ Chewing of gums and use of tobacco within the college premises.  ");
         jPanel5.add(jLabel10);
         jLabel10.setBounds(10, 50, 410, 20);
 
-        jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jPanel5.add(jLabel13);
-        jLabel13.setBounds(10, 70, 430, 30);
-
         jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel12.setText("Failing to attend the examination scheduled by the college.  ");
+        jLabel12.setText("♦ Failing to attend the examination scheduled by the college.  ");
         jPanel5.add(jLabel12);
         jLabel12.setBounds(10, 70, 360, 20);
 
@@ -220,7 +216,7 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
         jPanel5.setBounds(0, 120, 470, 120);
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel14.setText("Continuation of msiconducts for up to 5 times");
+        jLabel14.setText("♦ Continuation of msiconducts for up to 5 times");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -243,37 +239,37 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
         jPanel7.setBounds(0, 360, 470, 130);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel5.setText("Failing to maintain proper dress code in the college premises.");
+        jLabel5.setText("♦ Failing to maintain proper dress code in the college premises.");
         jPanel4.add(jLabel5);
         jLabel5.setBounds(10, 80, 360, 20);
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel6.setText("Failing to clear dues within deadline.");
+        jLabel6.setText("♦ Failing to clear dues within deadline.");
         jPanel4.add(jLabel6);
         jLabel6.setBounds(10, 20, 360, 20);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel7.setText("Supply of incorrect personal information.");
+        jLabel7.setText("♦ Supply of incorrect personal information.");
         jPanel4.add(jLabel7);
         jLabel7.setBounds(10, 40, 360, 20);
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel8.setText("Inappropriate use of official logo.");
+        jLabel8.setText("♦ Inappropriate use of official logo.");
         jPanel4.add(jLabel8);
         jLabel8.setBounds(10, 60, 360, 20);
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel11.setText("Violence, intimidation and harrasment of fellow students or college faculty.");
+        jLabel11.setText("♦ Violence, intimidation and harrasment of fellow students or college faculty.");
         jPanel4.add(jLabel11);
         jLabel11.setBounds(10, 290, 460, 20);
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel15.setText("Misbehaving with faculties or college staffs.");
+        jLabel15.setText("♦ Misbehaving with faculties or college staffs.");
         jPanel4.add(jLabel15);
         jLabel15.setBounds(10, 270, 360, 20);
 
         jLabel16.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel16.setText("Willfully damaging any property of or on the premises of the college.");
+        jLabel16.setText("♦ Willfully damaging any property of or on the premises of the college.");
         jPanel4.add(jLabel16);
         jLabel16.setBounds(10, 310, 410, 20);
 
@@ -286,6 +282,10 @@ public class DisciplinaryActsFrame extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/backgroundpic.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1512, 982);
+
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(-60, 510, 430, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
