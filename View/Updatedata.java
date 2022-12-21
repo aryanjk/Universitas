@@ -16,9 +16,7 @@ import java.sql.PreparedStatement;
  */
 public class Updatedata extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Updatedata
-     */
+
     public Updatedata() {
         initComponents();
     }
@@ -48,6 +46,7 @@ public class Updatedata extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,16 +56,13 @@ public class Updatedata extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel4.setText("Universitas User Profile");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(530, 10, 300, 50);
+        jLabel4.setBounds(540, 10, 300, 50);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Rectangle 77.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 1975, 70);
-
-        jLabel1.setText("jLabel1");
+        jLabel3.setBounds(0, 0, 0, 70);
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(650, 30, 37, 16);
+        jLabel1.setBounds(650, 30, 0, 0);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -156,6 +152,11 @@ public class Updatedata extends javax.swing.JFrame {
         getContentPane().add(jTextField6);
         jTextField6.setBounds(440, 300, 480, 30);
 
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Rectangle 77.png"))); // NOI18N
+        jLabel11.setText("jLabel11");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(0, 0, 1981, 70);
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Frame 8 (1).png"))); // NOI18N
@@ -195,7 +196,7 @@ public class Updatedata extends javax.swing.JFrame {
                     Connection con=DriverManager.getConnection("jdbc:mysql://db4free.net:3306/universitas","universitas","Universitas121");
             
                     
-                    String sql="update student set email='"+value1+"',std_contact='"+value2+"',password='"+value4+"',password='"+value5+"', parent_contact='"+value6+"' where email='"+value1+"'" ;
+                    String sql="update student set std_contact='"+value2+"',password='"+value4+"',password='"+value5+"', parent_contact='"+value6+"' where email='"+value1+"'" ;
                     PreparedStatement pst=con.prepareStatement(sql);
                     pst.execute();
                     JOptionPane.showMessageDialog(null,"Updated");
@@ -249,6 +250,7 @@ public class Updatedata extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
