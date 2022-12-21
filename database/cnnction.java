@@ -9,13 +9,13 @@ import java.sql.*;
  *
  * @author ujjwalpariyar
  */
-public class cnnction {
+public class cnnction{
     public Connection con;
             
     public static Connection connectdb(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://sql6.freesqldatabase.com:3306/sql6580070","sql6580070","6VVrAkhI5w");
+            Connection con=DriverManager.getConnection("jdbc:mysql://db4free.net:3306/universitas","universitas","31dc48eb");
             
             if(con!=null){
                 System.out.println("Successfully connected");
@@ -35,3 +35,4 @@ public class cnnction {
     
     
 }
+
