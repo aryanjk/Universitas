@@ -4,15 +4,16 @@
  */
 package View;
 
+import Controller.CourseController;
+import Model.CourseModel;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nwjsh
  */
 public class addcourse extends javax.swing.JFrame {
 
-    /**
-     * Creates new form addcourse
-     */
     public addcourse() {
         initComponents();
     }
@@ -28,6 +29,8 @@ public class addcourse extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -62,6 +65,17 @@ public class addcourse extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(20, 20, 440, 70);
 
+        jPanel2.setLayout(null);
+
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel6.setText("Year");
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(10, 0, 30, 40);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(300, 300, 50, 40);
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -70,13 +84,34 @@ public class addcourse extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Course_Name", "Course_Code", "Course_Duration", "Course_Description"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setResizable(false);
+            jTable1.getColumnModel().getColumn(1).setResizable(false);
+            jTable1.getColumnModel().getColumn(2).setResizable(false);
+            jTable1.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(600, 50, 370, 540);
+        jScrollPane1.setBounds(540, 40, 440, 540);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jLabel1.setText("Course Description :");
@@ -130,7 +165,7 @@ public class addcourse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Course_Duration);
-        Course_Duration.setBounds(120, 300, 230, 40);
+        Course_Duration.setBounds(120, 300, 170, 40);
 
         submit_btn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         submit_btn.setText("Add Course");
@@ -177,10 +212,54 @@ public class addcourse extends javax.swing.JFrame {
     }//GEN-LAST:event_Course_DurationActionPerformed
 
     private void submit_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submit_btnActionPerformed
-        String Course_Name = Course_Name.getText();
-        String Course_Code = Course_Code.getText():
-        String Course_Duration = Course_Duration.getText();
-        String Course_Description = Course_description.getText();
+        String course_Name = Course_Name.getText();
+        String course_Code = Course_Code.getText();
+        String course_Duration = Course_Duration.getText();
+        String course_Description = Course_Description.getText();
+        int a = 0;
+        
+        if (course_Name.equals("")){
+        JOptionPane.showMessageDialog(null, "Course Name IS MISSING.");
+            a = 1;
+            }
+        
+        if (course_Code.equals("")){
+        JOptionPane.showMessageDialog(null, "Course code IS MISSING.");
+            a = 1;
+            }
+        
+        if (course_Duration.equals("")){
+        JOptionPane.showMessageDialog(null, "Course duration IS MISSING.");
+            a = 1;
+            }
+        
+        else if(course_Description.equals("")){
+        JOptionPane.showMessageDialog(null, "Course description IS MISSING.");
+            a = 1;
+            }
+        else{
+      
+            try{
+            CourseModel d1= new CourseModel(Course_Name,Course_Code,Course_Duration, Course_Description);
+           
+            CourseController sc = new CourseController();
+            int insertCourse = sc.insertDetails(d1);
+
+                if (insertCourse > 0) {
+                    System.out.println("data inserted");
+                } else {
+                    System.out.println("Failed to insert data");
+                }
+                JOptionPane.showMessageDialog(null, "VALIDATION SUCCESSFUL");
+                
+            } 
+        catch (Exception e) {
+                // TODO: handle exception
+                JOptionPane.showMessageDialog(null, e);
+                System.out.printf(null,e);
+            }
+            
+        }
     }//GEN-LAST:event_submit_btnActionPerformed
 
     private void Back_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back_btnActionPerformed
@@ -236,7 +315,9 @@ public class addcourse extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton submit_btn;

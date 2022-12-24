@@ -26,19 +26,107 @@ public class Stdfeedback extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        Name = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        feedback = new javax.swing.JTextArea();
+        back = new javax.swing.JButton();
+        Submit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1000, 649));
+        setMinimumSize(new java.awt.Dimension(630, 649));
         setResizable(false);
         getContentPane().setLayout(null);
 
+        jLabel5.setBackground(new java.awt.Color(51, 204, 255));
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 3, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Please tell us what you think");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(210, 50, 220, 20);
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Feedback");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(70, 170, 80, 20);
+
+        Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NameActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Name);
+        Name.setBounds(70, 120, 260, 40);
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Name");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(70, 100, 50, 20);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 35)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("STUDENT FEEDBACK SYSTEM");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(50, 0, 530, 50);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 630, 50);
+
+        feedback.setColumns(20);
+        feedback.setRows(5);
+        jScrollPane1.setViewportView(feedback);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(70, 190, 500, 360);
+
+        back.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        getContentPane().add(back);
+        back.setBounds(70, 560, 80, 40);
+
+        Submit.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        Submit.setText("Submit");
+        Submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SubmitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Submit);
+        Submit.setBounds(490, 560, 80, 40);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/resizebg.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1000, 649);
+        jLabel1.setBounds(0, 0, 630, 649);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SubmitActionPerformed
+
+    private void NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NameActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,6 +165,16 @@ public class Stdfeedback extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Name;
+    private javax.swing.JButton Submit;
+    private javax.swing.JButton back;
+    private javax.swing.JTextArea feedback;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

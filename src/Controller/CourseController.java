@@ -13,14 +13,15 @@ public class CourseController {
     db db;
     public int insertDetails(CourseModel user){
     String Course_Name = user.getCourse_Name();
-    int Course_Code = user.getCourse_Code();
-    int Course_Duration = user.getCourse_Duration();
+    String Course_Code = user.getCourse_Code();
+    String Course_Duration = user.getCourse_Duration();
     String Course_Description = user.getCourse_Description();
     
-    String insertQuery = "insert into CourseModel(Course_name,Course_Code,Course_Duration,Course_Description)"+"values('"+Course_Name+"','"+Course_Code+"','"+Course_Duration+"','"+Course_Description+"')";  
+    String insertQuery = "insert into add_course(Course_Name,Course_Code,Course_Duration,Course_Description)" + "values('"+Course_Name+"','"+Course_Code+"','"+Course_Duration+"','"+Course_Description+"')";  
     db = new db();
     int result = db.manipulate(insertQuery);
     return result;
      }
+
          
 }

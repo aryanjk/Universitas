@@ -1,22 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Database;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
-import java.sql.Statement;
-import javax.swing.JOptionPane;
-
-/**
- *
- * @author nwjsh
- */
+import javax.swing.*;
+import java.sql.*;
 public class db {
     public Connection connection;
     Statement statement;
@@ -24,11 +9,11 @@ public class db {
     int value;
     public static Connection getconnection() {
         try {          
-            final String username = "root";
-            final String password = "2002";
+            final String username = "universitas";
+            final String password = "30dc48eb";
             Class.forName("com.mysql.cj.jdbc.Driver");
            Connection connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/universitas", username, password);         
+                    "jdbc:mysql://db4free.net :3306/universitas", username, password);         
             if (connection != null) {
                 
 
@@ -94,9 +79,8 @@ public class db {
 
     public static void main(String[] args) {
 
-         DbConnection.getconnection();
+         db.getconnection();
 
     }
 
-}
-
+   }
