@@ -1,35 +1,47 @@
-package controller;
+package Controller;
 
-import database.DbConnection;
-import models.Student;
+
+import java.sql.*;
+import java.sql.SQLException;
+
+import Database.DbConnection;
+import Model.Student;
 
 public class StudentController {
-    DbConnection dbConnection;
+   
+    DbConnection db = new DbConnection();
+    Connection con=DbConnection.getconnection();
+    PreparedStatement st;
 
-    public int insertStudent(Student student) {
-        int id = student.getStd_id();
-        String name = student.getStd_name();
-        String address = student.getStd_address();
-        int age = student.getStd_age();
-        int contact = student.getStd_contacr();
-        String insertQuery = String.format(
-                "insert into tbl_student(std_id,std_name,std_age,std_address,std_contacr) values(%d,'%s',%d,'%s',%d)",
-                id,
-                name, age, address, contact);
-        System.out.println(insertQuery);
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(insertQuery);
-        return result;
+    public int insertdetails(Student student) {
+        String fname=student.getF_name();
+        String lname=student.getL_name();
+        String email=student.getEmail();
+        int std_contact=student.getStd_contact();
+        String parent_name=student.getParents_name();
+        String parent_c=student.getParent_contact();
+        String pass=student.getPassword();
+        String dob=student.getDob();
+        String sq=student.getSecurity_qn();
+        String sans=student.getSecurity_ans();
+        try{
+            String query = "insert into student values('"+fname+"','"+lname+"','"+email+"','"+std_contact+"','"+parent_name+"','"+parent_c+"','"+pass+"','"+dob+"','"+sq+"','"+sans+"')";
+            
+            st=con.prepareStatement(query);
+
+        st.executeUpdate();
+        
+    }catch(SQLException e){
+            e.printStackTrace();
+           
+        }  
+        return 0;
     }
-
-    public int updateStudent(Student student) {
-        int id = student.getStd_id();
-        String name = student.getStd_name();
-        String updateQuery = String.format(
-                "update tbl_student set std_name='%s' where std_id = %d", name, id);
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(updateQuery);
-        return result;
-    }
-
-}
+        // public ResultSet login(Student student) {
+        //     String email = student.getEmail();
+        //     String pass = student.getPassword();
+        //     String selectQuery = "select * from students where email='" + email + "' and password='" + pass + "'";
+        //     DbConnection = new dbConnection();
+        //     ResultSet result = DbConnection.retrieve(selectQuery);
+        //     return result;
+        }
