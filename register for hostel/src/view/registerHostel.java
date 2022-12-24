@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-
+import java.sql.*;
+import javax.swing.*;
+import java.sql.DriverManager;
 /**
  *
  * @author krishal
@@ -30,9 +32,9 @@ public class registerHostel extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        ctn = new javax.swing.JTextField();
+        f_name = new javax.swing.JTextField();
+        l_name = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -59,38 +61,38 @@ public class registerHostel extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(210, 440, 270, 50);
 
-        jTextField2.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jTextField2.setPreferredSize(new java.awt.Dimension(64, 35));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        ctn.setBackground(new java.awt.Color(204, 204, 204));
+        ctn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        ctn.setPreferredSize(new java.awt.Dimension(64, 35));
+        ctn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                ctnActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(540, 440, 260, 40);
+        jPanel1.add(ctn);
+        ctn.setBounds(540, 440, 260, 40);
 
-        jTextField3.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jTextField3.setPreferredSize(new java.awt.Dimension(64, 35));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        f_name.setBackground(new java.awt.Color(204, 204, 204));
+        f_name.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        f_name.setPreferredSize(new java.awt.Dimension(64, 35));
+        f_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                f_nameActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(450, 270, 260, 40);
+        jPanel1.add(f_name);
+        f_name.setBounds(450, 270, 260, 40);
 
-        jTextField4.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jTextField4.setPreferredSize(new java.awt.Dimension(64, 35));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        l_name.setBackground(new java.awt.Color(204, 204, 204));
+        l_name.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        l_name.setPreferredSize(new java.awt.Dimension(64, 35));
+        l_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                l_nameActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4);
-        jTextField4.setBounds(450, 360, 260, 40);
+        jPanel1.add(l_name);
+        l_name.setBounds(450, 360, 260, 40);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         jLabel1.setText("REGISTRATION FOR HOSTEL");
@@ -149,20 +151,36 @@ public class registerHostel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void ctnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_ctnActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void f_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_f_nameActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void l_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_l_nameActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        String fistname = f_name.getText();
+        String lastname = l_name.getText();
+        String contact = ctn.getText();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://db4free.net:3306/universitas","universitas","30dc48eb");
+            
+            Statement stm=con.createStatement();
+            String sql="INSERT INTO Hostel VALUES('"+fistname+"','"+lastname+"','"+contact+"')";
+            stm.executeUpdate(sql);
+            JOptionPane.showMessageDialog(this,"Registered successfully");
+            con.close();
+            
+            
+        }catch(Exception e){
+               
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -206,6 +224,8 @@ public class registerHostel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgimg;
+    private javax.swing.JTextField ctn;
+    private javax.swing.JTextField f_name;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -214,8 +234,6 @@ public class registerHostel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField l_name;
     // End of variables declaration//GEN-END:variables
 }
