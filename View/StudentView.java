@@ -1,7 +1,7 @@
 package view;
 
 import controller.StudentController;
-import Model.Student;
+import models.Student;
 
 public class StudentView {
     public static void main(String[] args) {
