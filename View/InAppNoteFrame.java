@@ -6,17 +6,30 @@ package View;
 import java.sql.*;
 import javax.swing.*;
 import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+import java.sql.Exception;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author Lenovo
  */
 public class InAppNoteFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form InAppNoteFrame
-     */
+    Connection con;
+
     public InAppNoteFrame() {
         initComponents();
+         String url="jdbc:mysql://db4free.net :3306/universitas";
+        String user="universitas";
+        String password="30dc48eb";
+        
+        try{
+            con=DriverManager.getConnection(url,user,password);
+        }catch(Exception ex){
+            System.out.println("Error : " + ex.getMessage());
+        }
     }
 
     /**
@@ -31,10 +44,12 @@ public class InAppNoteFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         nt = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         Tlt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Note_table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,7 +63,7 @@ public class InAppNoteFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(nt);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(480, 220, 480, 350);
+        jScrollPane1.setBounds(400, 220, 330, 350);
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Submit");
@@ -58,12 +73,7 @@ public class InAppNoteFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(850, 590, 110, 40);
-
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("Show lists");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(850, 160, 110, 40);
+        jButton1.setBounds(620, 590, 110, 40);
 
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton3.setText("Exit");
@@ -73,14 +83,37 @@ public class InAppNoteFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(480, 590, 110, 40);
+        jButton3.setBounds(400, 590, 110, 40);
         getContentPane().add(Tlt);
-        Tlt.setBounds(580, 160, 200, 40);
+        Tlt.setBounds(550, 170, 490, 40);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setText("Notes Title:");
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel2.setText("Note Title:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(480, 170, 100, 30);
+        jLabel2.setBounds(420, 170, 130, 30);
+
+        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButton2.setText("Show Table Data");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(890, 590, 150, 40);
+
+        Note_table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Note Title", "Note"
+            }
+        ));
+        jScrollPane2.setViewportView(Note_table);
+
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(790, 220, 250, 350);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Group 57.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -100,7 +133,7 @@ public class InAppNoteFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1KeyPressed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -121,6 +154,21 @@ public class InAppNoteFrame extends javax.swing.JFrame {
                
         }// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String sql = "SELECT * FROM Note";
+        try{
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+            DefaultTableModel model = (DefaultTableModel) Note_table.getModel();
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1), rs.getString(2)});
+                
+            }
+        }catch (Exception ex){
+            System.out.println("Error : " +ex.getMessage());
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,6 +206,7 @@ public class InAppNoteFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable Note_table;
     private javax.swing.JTextField Tlt;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -165,6 +214,7 @@ public class InAppNoteFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea nt;
     // End of variables declaration//GEN-END:variables
 }
