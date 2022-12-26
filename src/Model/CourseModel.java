@@ -15,21 +15,21 @@ public class CourseModel {
 
     public CourseModel(JTextField Course_Name1, JTextField Course_Code1, JTextField Course_Duration1, JTextArea Course_Description1) {
     }
-    private String Course_Name;
-    private String Course_Code;
-    private String Course_Duration;
-    private String Course_Description;
+    private static String Course_Name;
+    private static String Course_Code;
+    private static String Course_Duration;
+    private static String Course_Description;
 
-    public String getCourse_Name() {
+    public static String getCourse_Name() {
         return Course_Name;
     }
-    public String getCourse_Code() {
+    public static String getCourse_Code() {
         return Course_Code;
     }
-    public String getCourse_Duration() {
+    public static String getCourse_Duration() {
         return Course_Duration;
     }
-    public String getCourse_Description() {
+    public static String getCourse_Description() {
         return Course_Description;
     }
     public void setCourse_Name(String course_Name) {

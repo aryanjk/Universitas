@@ -1,176 +1,121 @@
 package Model;
 
-public class Student {
-    private String user_username;
-    private String user_pass;
-    private String user_repass;
-    private String user_fname;
-    private String user_mname;
-    private String user_lname;
-    private String user_gender;
-    private String user_dob;
-    private String user_nationality;
-    private String user_address;
-    private String user_email;
-    private String user_phone;
-    private String user_sq;
-    private String user_sqanswer;
-    private String user_citizen;
-    private String user_license;
-    private String user_expiry;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
-    public Student(String user_username,
-    String user_pass,
-    String user_repass,
-    String user_fname,
-    String user_mname,
-    String user_lname,
-    String user_gender,
-    String user_dob,
-    String user_nationality,
-    String user_address,
-    String user_email,
-    String user_phone,
-    String user_sq,
-    String user_sqanswer,
-    String user_citizen,
-    String user_license,
-    String user_expiry){
-        this.user_username = user_username;
-        this.user_pass = user_pass;
-        this.user_repass = user_repass;
-        this.user_fname = user_fname;
-        this.user_mname = user_mname;
-        this.user_lname = user_lname;
-        this.user_gender = user_gender;
-        this.user_dob = user_dob;
-        this.user_nationality = user_nationality;
-        this.user_address = user_address;
-        this.user_email = user_email;
-        this.user_phone = user_phone;
-        this.user_sq = user_sq;
-        this.user_sqanswer = user_sqanswer;
-        this.user_citizen = user_citizen;
-        this.user_license = user_license;
-        this.user_expiry = user_expiry;
+public class Student{
+    // creation of instance variable
+	
 
+    // creation of public getter and setter --> for student ID
+	private String f_name;
+	private String l_name;
+	private String email;
+	private int std_contact;
+	private String parents_name;
+	private String parent_contact;
+	private String password;
+	private String dob;
+	private String security_qn;
+	private String security_ans;
+
+	public Student(String f_name, String l_name, String email, int std_contact, String parents_name, String parent_contact, String password, String dob, String security_qn, String security_ans) {
+		this.f_name = f_name;
+		this.l_name = l_name;
+		this.email = email;
+		this.std_contact = std_contact;
+		this.parents_name = parents_name;
+		this.parent_contact = parent_contact;
+		this.password = password;
+		this.dob = dob;
+		this.security_qn = security_qn;
+		this.security_ans = security_ans;
+	}
+
+	public Student(JTextField emailText, JPasswordField passText) {
     }
 
+    // public Student()
+	public String getF_name() {
+		return this.f_name;
+	}
+
+	public void setF_name(String f_name) {
+		this.f_name = f_name;
+	}
+
+	public String getL_name() {
+		return this.l_name;
+	}
+
+	public void setL_name(String l_name) {
+		this.l_name = l_name;
+	}
+
+	public String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getStd_contact() {
+		return this.std_contact;
+	}
+
+	public void setStd_contact(int std_contact) {
+		this.std_contact = std_contact;
+	}
+
+	public String getParents_name() {
+		return this.parents_name;
+	}
+
+	public void setParents_name(String parents_name) {
+		this.parents_name = parents_name;
+	}
+
+	public String getParent_contact() {
+		return this.parent_contact;
+	}
+
+	public void setParent_contact(String parent_contact) {
+		this.parent_contact = parent_contact;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getDob() {
+		return this.dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public String getSecurity_qn() {
+		return this.security_qn;
+	}
+
+	public void setSecurity_qn(String security_qn) {
+		this.security_qn = security_qn;
+	}
+
+	public String getSecurity_ans() {
+		return this.security_ans;
+	}
+
+	public void setSecurity_ans(String security_ans) {
+		this.security_ans = security_ans;
+	}
+
    
 
-    public void setUsername(String newUsername){
-        this.user_username = newUsername;
-    }
-
-    public String getUsername(){
-        return this.user_username;
-    }
-
-    public void setUserpass(String newUserpass){
-        this.user_pass = newUserpass;
-    }
-
-    public String getuserpass(){
-        return this.user_pass;
-    }
-    public void setUserrepass(String newUserrepass){
-         this.user_repass = newUserrepass;
-    }
-    public String getuserrepass(){
-        return this.user_repass;
-    }
-    public void setUserfname(String newUserfname){
-        this.user_fname = newUserfname;
-    }
-    public String getuserfname(){
-        return this.user_fname;
-    }
-    public void setUsermname(String newUsermname){
-        this.user_mname = newUsermname;
-    }
-    public String getusermname(){
-        return this.user_mname;
-
-       
-    }
-    public void setUserlname(String newUserlname){
-        this.user_lname = newUserlname;
-    }
-    public String getuserlname(){
-        return this.user_lname;
-    }
-    public void setUsergender(String newUsergender){
-        this.user_gender = newUsergender;
-    }
-    public String getusergender(){
-        return this.user_gender;
-   
-    }
-    public void setUserdob(String newUserdob){
-        this.user_dob = newUserdob;
-    }
-    public String getuserdob(){
-        return this.user_dob;
-   
-    }
-    public void setUsernationality(String newUsernationality){
-        this.user_nationality = newUsernationality;
-    }
-    public String getusernationality(){
-        return this.user_nationality;
-   
-    }
-    public void setUseraddress(String newUseraddress){
-        this.user_address = newUseraddress;
-    }
-    public String getuseraddress(){
-        return this.user_address;
-   
-    }
-    public void setUseremail(String newUseremail){
-        this.user_email = newUseremail;
-    }
-    public String getuseremail(){
-        return this.user_email;
-   
-    }
-    public void setUserphone(String newUserphone){
-        this.user_phone = newUserphone;
-    }
-    public String getuserphone(){
-        return this.user_phone;
-   
-    }
-    public void setUsersq(String newUsersq){
-        this.user_sq = newUsersq;
-    }
-    public String getusersq(){
-        return this.user_sq;
-   
-    }
-    public void setUsersqanswer(String newUsersqanswer){
-        this.user_sqanswer = newUsersqanswer;
-    }
-    public String getusersqanswer(){
-        return this.user_sqanswer;
-   
-    }
-    public void setUsercitizen(String newUsercitizen){
-        this.user_citizen = newUsercitizen;
-    }
-    public String getusercitizen(){
-        return this.user_citizen;
-    }
-    public void setUserlicense(String newUserlicense){
-        this.user_license = newUserlicense;
-    }
-    public String getuserlicense(){
-        return this.user_license;
-    }
-    public void setUserexpiry(String newUserexpiry){
-        this.user_expiry = newUserexpiry;
-    }
-    public String getuserexpiry(){
-        return this.user_expiry;
-    }
 }

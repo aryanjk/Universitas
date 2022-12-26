@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
-
+import java.sql.*;
+import javax.swing.*;
+import java.sql.DriverManager;
 /**
  *
  * @author nwjsh
@@ -28,12 +30,12 @@ public class Stdfeedback extends javax.swing.JFrame {
 
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        Name = new javax.swing.JTextField();
+        Nme = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        feedback = new javax.swing.JTextArea();
+        fdb = new javax.swing.JTextArea();
         back = new javax.swing.JButton();
         Submit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -48,27 +50,27 @@ public class Stdfeedback extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Please tell us what you think");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(210, 50, 220, 20);
+        jLabel5.setBounds(200, 50, 220, 20);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Feedback");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(70, 170, 80, 20);
+        jLabel4.setBounds(60, 170, 80, 20);
 
-        Name.addActionListener(new java.awt.event.ActionListener() {
+        Nme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NameActionPerformed(evt);
+                NmeActionPerformed(evt);
             }
         });
-        getContentPane().add(Name);
-        Name.setBounds(70, 120, 260, 40);
+        getContentPane().add(Nme);
+        Nme.setBounds(60, 120, 260, 40);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Name");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 100, 50, 20);
+        jLabel3.setBounds(60, 100, 50, 20);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
@@ -82,12 +84,12 @@ public class Stdfeedback extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 630, 50);
 
-        feedback.setColumns(20);
-        feedback.setRows(5);
-        jScrollPane1.setViewportView(feedback);
+        fdb.setColumns(20);
+        fdb.setRows(5);
+        jScrollPane1.setViewportView(fdb);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(70, 190, 500, 360);
+        jScrollPane1.setBounds(60, 190, 500, 360);
 
         back.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         back.setText("Back");
@@ -97,7 +99,7 @@ public class Stdfeedback extends javax.swing.JFrame {
             }
         });
         getContentPane().add(back);
-        back.setBounds(70, 560, 80, 40);
+        back.setBounds(60, 560, 80, 40);
 
         Submit.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         Submit.setText("Submit");
@@ -107,7 +109,7 @@ public class Stdfeedback extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Submit);
-        Submit.setBounds(490, 560, 80, 40);
+        Submit.setBounds(480, 560, 80, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/resizebg.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -117,12 +119,25 @@ public class Stdfeedback extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitActionPerformed
-        // TODO add your handling code here:
+        String Name = Nme.getText();
+        String Description = fdb.getText();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://db4free.net:3306/universitas","universitas","30dc48eb");
+            Statement stm=con.createStatement();
+            String sql="INSERT INTO feedback VALUES('"+Name+"','"+Description+"')";
+            stm.executeUpdate(sql);
+            JOptionPane.showMessageDialog(this,"Feedback submitted successfully");
+            con.close();
+            
+        }catch(Exception e){
+               
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_SubmitActionPerformed
 
-    private void NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameActionPerformed
+    private void NmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NmeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NameActionPerformed
+    }//GEN-LAST:event_NmeActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
@@ -165,10 +180,10 @@ public class Stdfeedback extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Name;
+    private javax.swing.JTextField Nme;
     private javax.swing.JButton Submit;
     private javax.swing.JButton back;
-    private javax.swing.JTextArea feedback;
+    private javax.swing.JTextArea fdb;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

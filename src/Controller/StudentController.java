@@ -1,4 +1,6 @@
-package controller;
+package Controller;
+
+
 import java.sql.*;
 import java.sql.SQLException;
 
@@ -35,11 +37,11 @@ public class StudentController {
         }  
         return 0;
     }
-
-
-//public int delete(){
-//        String query = "delete from user where status='"+"active"+"'";
-//        dbConnection = new DbConnection();
-//        int result = dbConnection.manipulate(query);
-//        return result;
-//    }
+        // public ResultSet login(Student student) {
+        //     String email = student.getEmail();
+        //     String pass = student.getPassword();
+        //     String selectQuery = "select * from students where email='" + email + "' and password='" + pass + "'";
+        //     DbConnection = new dbConnection();
+        //     ResultSet result = DbConnection.retrieve(selectQuery);
+        //     return result;
+        }
