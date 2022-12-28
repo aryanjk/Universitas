@@ -23,6 +23,10 @@ public class DbConnection{
     public static void main(String[] args) {
         DbConnection.connectdb();
     }
+
+    public int manipulate(String insertQuery) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     
     

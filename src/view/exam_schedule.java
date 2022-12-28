@@ -26,16 +26,6 @@ public class exam_schedule extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        universitas_btn = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        routine_btn = new javax.swing.JButton();
-        notice_btn = new javax.swing.JButton();
-        attandance_btn = new javax.swing.JButton();
-        quiz_btn = new javax.swing.JButton();
-        calandar_btn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         calandar = new com.toedter.calendar.JCalendar();
         jLabel1 = new javax.swing.JLabel();
@@ -44,90 +34,6 @@ public class exam_schedule extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1512, 982));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(null);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/122.png"))); // NOI18N
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(60, 30, 50, 34);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/pfp.png"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(1420, 30, 50, 49);
-
-        universitas_btn.setFont(new java.awt.Font("Times New Roman", 1, 40)); // NOI18N
-        universitas_btn.setText("Universitas");
-        universitas_btn.setBorder(null);
-        universitas_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                universitas_btnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(universitas_btn);
-        universitas_btn.setBounds(50, 20, 300, 70);
-
-        jButton5.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton5);
-        jButton5.setBounds(1410, 20, 70, 70);
-
-        routine_btn.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        routine_btn.setText("Routine");
-        routine_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                routine_btnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(routine_btn);
-        routine_btn.setBounds(400, 40, 90, 40);
-
-        notice_btn.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        notice_btn.setText("Notice");
-        notice_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                notice_btnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(notice_btn);
-        notice_btn.setBounds(560, 40, 90, 40);
-
-        attandance_btn.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        attandance_btn.setText("Attandance");
-        attandance_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                attandance_btnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(attandance_btn);
-        attandance_btn.setBounds(720, 40, 110, 40);
-
-        quiz_btn.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        quiz_btn.setText("Quiz");
-        quiz_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quiz_btnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(quiz_btn);
-        quiz_btn.setBounds(900, 40, 90, 40);
-
-        calandar_btn.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        calandar_btn.setText("Calendar");
-        calandar_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calandar_btnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(calandar_btn);
-        calandar_btn.setBounds(1060, 40, 100, 40);
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1510, 110);
-
         jButton1.setText("Exam Schedules");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +41,7 @@ public class exam_schedule extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(670, 720, 150, 40);
+        jButton1.setBounds(1160, 680, 160, 60);
 
         calandar.setDecorationBackgroundColor(new java.awt.Color(134, 204, 252));
         calandar.setWeekOfYearVisible(false);
@@ -145,7 +51,7 @@ public class exam_schedule extends javax.swing.JFrame {
             }
         });
         getContentPane().add(calandar);
-        calandar.setBounds(180, 190, 1140, 590);
+        calandar.setBounds(180, 150, 1140, 590);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bg.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -153,34 +59,6 @@ public class exam_schedule extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void universitas_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_universitas_btnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_universitas_btnActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void routine_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_routine_btnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_routine_btnActionPerformed
-
-    private void notice_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notice_btnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_notice_btnActionPerformed
-
-    private void attandance_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_attandance_btnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_attandance_btnActionPerformed
-
-    private void quiz_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quiz_btnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_quiz_btnActionPerformed
-
-    private void calandar_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calandar_btnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_calandar_btnActionPerformed
 
     private void calandarComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_calandarComponentAdded
         // TODO add your handling code here:
@@ -226,18 +104,8 @@ public class exam_schedule extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton attandance_btn;
     private com.toedter.calendar.JCalendar calandar;
-    private javax.swing.JButton calandar_btn;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton notice_btn;
-    private javax.swing.JButton quiz_btn;
-    private javax.swing.JButton routine_btn;
-    private javax.swing.JButton universitas_btn;
     // End of variables declaration//GEN-END:variables
 }
