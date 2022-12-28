@@ -1,120 +1,67 @@
-package Model;
-
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+package models;
 
 public class Student{
     // creation of instance variable
-	
+    private int std_id;
+    private String std_name;
+    private int std_age;
+    private String std_address;
+    private int std_contacr;
 
     // creation of public getter and setter --> for student ID
-	private String f_name;
-	private String l_name;
-	private String email;
-	private int std_contact;
-	private String parents_name;
-	private String parent_contact;
-	private String password;
-	private String dob;
-	private String security_qn;
-	private String security_ans;
-
-	public Student(String f_name, String l_name, String email, int std_contact, String parents_name, String parent_contact, String password, String dob, String security_qn, String security_ans) {
-		this.f_name = f_name;
-		this.l_name = l_name;
-		this.email = email;
-		this.std_contact = std_contact;
-		this.parents_name = parents_name;
-		this.parent_contact = parent_contact;
-		this.password = password;
-		this.dob = dob;
-		this.security_qn = security_qn;
-		this.security_ans = security_ans;
+	public int getStd_id() {
+		return this.std_id;
 	}
 
-	public Student(JTextField emailText, JPasswordField passText) {
+	public void setStd_id(int std_id) {
+		this.std_id = std_id;
+	}
+
+    // creation of public getter and setter --> for student Name
+	public String getStd_name() {
+		return this.std_name;
+	}
+
+	public void setStd_name(String std_name) {
+		this.std_name = std_name;
+	}
+
+    // creation of public getter and setter --> for student Age
+	public int getStd_age() {
+		return this.std_age;
+	}
+
+	public void setStd_age(int std_age) {
+		this.std_age = std_age;
+	}
+
+    // creation of public getter and setter --> for student Address
+	public String getStd_address() {
+		return this.std_address;
+	}
+
+	public void setStd_address(String std_address) {
+		this.std_address = std_address;
+	}
+
+    // creation of public getter and setter --> for student Contact
+	public int getStd_contacr() {
+		return this.std_contacr;
+	}
+
+	public void setStd_contacr(int std_contacr) {
+		this.std_contacr = std_contacr;
+	}
+
+
+    // creation of public constructor
+    public Student(int std_id, String std_name, int std_age, String std_address, int std_contacr){
+        this.std_id = std_id;
+        this.std_name = std_name;
+        this.std_age = std_age;
+        this.std_address = std_address;
+        this.std_contacr = std_contacr;
     }
-
-    // public Student()
-	public String getF_name() {
-		return this.f_name;
-	}
-
-	public void setF_name(String f_name) {
-		this.f_name = f_name;
-	}
-
-	public String getL_name() {
-		return this.l_name;
-	}
-
-	public void setL_name(String l_name) {
-		this.l_name = l_name;
-	}
-
-	public String getEmail() {
-		return this.email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public int getStd_contact() {
-		return this.std_contact;
-	}
-
-	public void setStd_contact(int std_contact) {
-		this.std_contact = std_contact;
-	}
-
-	public String getParents_name() {
-		return this.parents_name;
-	}
-
-	public void setParents_name(String parents_name) {
-		this.parents_name = parents_name;
-	}
-
-	public String getParent_contact() {
-		return this.parent_contact;
-	}
-
-	public void setParent_contact(String parent_contact) {
-		this.parent_contact = parent_contact;
-	}
-
-	public String getPassword() {
-		return this.password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getDob() {
-		return this.dob;
-	}
-
-	public void setDob(String dob) {
-		this.dob = dob;
-	}
-
-	public String getSecurity_qn() {
-		return this.security_qn;
-	}
-
-	public void setSecurity_qn(String security_qn) {
-		this.security_qn = security_qn;
-	}
-
-	public String getSecurity_ans() {
-		return this.security_ans;
-	}
-
-	public void setSecurity_ans(String security_ans) {
-		this.security_ans = security_ans;
-	}
 
    
 
