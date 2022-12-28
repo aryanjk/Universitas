@@ -14,37 +14,50 @@ public class DbConnection {
 
     int value;
 
-    public DbConnection() {
+    public static Connection getconnection() {
 
         try {
 
-            String username ="universitas" ;
+            
 
-            String password = "Universitas121";
+
+
+            final String username = "universitas";
+
+            final String password = "30dc48eb";
+
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            connection = DriverManager.getConnection(
+           Connection connection = DriverManager.getConnection(
 
-                      "jdbc:mysql://db4free.net :3306/universitas", username, password);
+
+                    "jdbc:mysql://db4free.net :3306/universitas", username, password);
+
+           
 
             if (connection != null) {
+                
 
-                System.out.println("Connected to database --> universitas");
-
-            } else {
+                System.out.println("Connected to database --> Universitas Database");
+                return connection;
+                
+              } else {
 
                 System.out.println("Error connecting to database");
 
             }
+            
 
-            statement = connection.createStatement();
+            
 
         } catch (Exception e) {
 
             e.printStackTrace();
 
         }
+        return null;
+        
 
     }
 
@@ -55,6 +68,7 @@ public class DbConnection {
     public int manipulate(String query) {
 
         try {
+            statement = connection.createStatement();
 
             value = statement.executeUpdate(query);
 
@@ -74,26 +88,20 @@ public class DbConnection {
 
     }
 
-    public ResultSet retrieve(String query) {
-
+    public ResultSet retrieve(String selectQuery){
         try {
-
-            resultSet = statement.executeQuery(query);
-
-        } catch (SQLException e) {
-
+            resultSet=selectQuery.executeQuery();
+        }catch (SQLException e){
             e.printStackTrace();
-
         }
-
         return resultSet;
-
     }
 
     public static void main(String[] args) {
 
-        new DbConnection();
+         DbConnection.getconnection();
 
     }
 
-}
+   }
+
