@@ -35,7 +35,7 @@ public class calender extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jCalendar1 = new com.toedter.calendar.JCalendar();
+        jCalendar1 = new org.netbeans.modules.form.InvalidComponent();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,8 +86,6 @@ public class calender extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1512, 110);
 
-        jCalendar1.setBackground(new java.awt.Color(255, 255, 255));
-        jCalendar1.setWeekOfYearVisible(false);
         getContentPane().add(jCalendar1);
         jCalendar1.setBounds(230, 170, 1060, 620);
 
@@ -141,7 +139,7 @@ public class calender extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private com.toedter.calendar.JCalendar jCalendar1;
+    private org.netbeans.modules.form.InvalidComponent jCalendar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
