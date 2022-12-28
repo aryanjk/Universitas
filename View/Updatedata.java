@@ -60,7 +60,7 @@ public class Updatedata extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Rectangle 77.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 0, 70);
+        jLabel3.setBounds(0, 0, 1934, 70);
         getContentPane().add(jLabel1);
         jLabel1.setBounds(650, 30, 0, 0);
 
