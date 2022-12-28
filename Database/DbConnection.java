@@ -1,10 +1,10 @@
-package Database;
+package database;
 
 import javax.swing.*;
 
 import java.sql.*;
 
-public class DbConnection {
+public class Dbconnection {
 
     public Connection connection;
 
@@ -14,50 +14,37 @@ public class DbConnection {
 
     int value;
 
-    public static Connection getconnection() {
+    public Dbconnection() {
 
         try {
 
-            
+            String username = "root";
 
-
-
-            final String username = "universitas";
-
-            final String password = "30dc48eb";
-
+            String password = "root";
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-           Connection connection = DriverManager.getConnection(
+            connection = DriverManager.getConnection(
 
-
-                    "jdbc:mysql://db4free.net :3306/universitas", username, password);
-
-           
+                    "jdbc:mysql://localhost:3306/SoftwaricaDB", username, password);
 
             if (connection != null) {
-                
 
-                System.out.println("Connected to database --> Universitas Database");
-                return connection;
-                
-              } else {
+                System.out.println("Connected to database --> SoftwaricaDB");
+
+            } else {
 
                 System.out.println("Error connecting to database");
 
             }
-            
 
-            
+            statement = connection.createStatement();
 
         } catch (Exception e) {
 
             e.printStackTrace();
 
         }
-        return null;
-        
 
     }
 
@@ -68,7 +55,6 @@ public class DbConnection {
     public int manipulate(String query) {
 
         try {
-            statement = connection.createStatement();
 
             value = statement.executeUpdate(query);
 
@@ -88,20 +74,26 @@ public class DbConnection {
 
     }
 
-    public ResultSet retrieve(String selectQuery){
+    public ResultSet retrieve(String query) {
+
         try {
-            resultSet=selectQuery.executeQuery();
-        }catch (SQLException e){
+
+            resultSet = statement.executeQuery(query);
+
+        } catch (SQLException e) {
+
             e.printStackTrace();
+
         }
+
         return resultSet;
+
     }
 
     public static void main(String[] args) {
 
-         DbConnection.getconnection();
+        new Dbconnection();
 
     }
 
-   }
-
+}
