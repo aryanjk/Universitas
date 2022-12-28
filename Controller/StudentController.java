@@ -1,28 +1,48 @@
 package Controller;
 
+
+import java.sql.*;
+import java.sql.SQLException;
+
 import Database.DbConnection;
 import Model.Student;
 
 public class StudentController {
-    DbConnection dbConnection;
+   
+    DbConnection db = new DbConnection();
+    Connection con=DbConnection.getconnection();
+    PreparedStatement st;
 
     public int insertdetails(Student student) {
-        String f_name = student.getF_name();
-        String l_name = student.getL_name();
-        String email = student.getEmail();
-        String std_contact = student.getParent_contact();
-        String parents_name = student.getParents_name();
-        String parent_contact = student.getParent_contact();
-        String password = student.getPassword();
-        String dob = student.getDob();
-        String security_qn = student.getSecurity_qn();
-        String security_ans = student.getSecurity_ans();
+        String fname=student.getF_name();
+        String lname=student.getL_name();
+        String email=student.getEmail();
+        int std_contact=student.getStd_contact();
+        String parent_name=student.getParents_name();
+        String parent_c=student.getParent_contact();
+        String pass=student.getPassword();
+        String dob=student.getDob();
+        String sq=student.getSecurity_qn();
+        String sans=student.getSecurity_ans();
+        try{
+            String query = "insert into student values('"+fname+"','"+lname+"','"+email+"','"+std_contact+"','"+parent_name+"','"+parent_c+"','"+pass+"','"+dob+"','"+sq+"','"+sans+"')";
+            
+            st=con.prepareStatement(query);
 
-        String insertQuery = "insert into students(f_name,l_name,email,std_contact,parents_name,parent_contact,password,dob,security_qn,security_ans)"
-                + "values('" + f_name + "','" + l_name + "','" + email + "','" + std_contact + "','" + parents_name + "','"
-                + parent_contact + "','" + password + "','" + dob + "','" + security_qn + "','" + security_ans + "')";
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(insertQuery);
-        return result;
+        st.executeUpdate();
+        
+    }catch(SQLException e){
+            e.printStackTrace();
+           
+        }  
+        return 0;
     }
+        // public ResultSet login(Student student) {
+        //     String email = student.getEmail();
+        //     String pass = student.getPassword();
+        //     String selectQuery = "select * from students where email='" + email + "' and password='" + pass + "'";
+        //     DbConnection = new DbConnection();
+        //     ResultSet result = dbConnection.retrieve(selectQuery);
+        //     return result;
+        // }
 }
