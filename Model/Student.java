@@ -1,5 +1,8 @@
 package Model;
 
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 public class Student{
     // creation of instance variable
 	
@@ -8,7 +11,7 @@ public class Student{
 	private String f_name;
 	private String l_name;
 	private String email;
-	private String std_contact;
+	private int std_contact;
 	private String parents_name;
 	private String parent_contact;
 	private String password;
@@ -16,7 +19,7 @@ public class Student{
 	private String security_qn;
 	private String security_ans;
 
-	public Student(String f_name, String l_name, String email, String std_contact, String parents_name, String parent_contact, String password, String dob, String security_qn, String security_ans) {
+	public Student(String f_name, String l_name, String email, int std_contact, String parents_name, String parent_contact, String password, String dob, String security_qn, String security_ans) {
 		this.f_name = f_name;
 		this.l_name = l_name;
 		this.email = email;
@@ -29,7 +32,15 @@ public class Student{
 		this.security_ans = security_ans;
 	}
 
-	// public Student()
+	public Student(JTextField emailText, JPasswordField passText) {
+    }
+
+    public Student(String f_name2, String l_name2, String email2, String std_contact2, String parents_name2,
+            String parent_contact2, String password2, String c_pass, String dob2, Object security_qn2,
+            String security_ans2, String security_ans3, String security_ans4) {
+    }
+
+    // public Student()
 	public String getF_name() {
 		return this.f_name;
 	}
@@ -54,11 +65,11 @@ public class Student{
 		this.email = email;
 	}
 
-	public String getStd_contact() {
+	public int getStd_contact() {
 		return this.std_contact;
 	}
 
-	public void setStd_contact(String std_contact) {
+	public void setStd_contact(int std_contact) {
 		this.std_contact = std_contact;
 	}
 
