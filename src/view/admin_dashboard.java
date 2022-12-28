@@ -36,9 +36,7 @@ public class admin_dashboard extends javax.swing.JFrame {
         bgimg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1512, 982));
         setMinimumSize(new java.awt.Dimension(1512, 982));
-        setPreferredSize(new java.awt.Dimension(1512, 982));
         setSize(new java.awt.Dimension(1512, 982));
         getContentPane().setLayout(null);
 
@@ -50,15 +48,15 @@ public class admin_dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(home_btn);
-        home_btn.setBounds(20, 20, 320, 70);
+        home_btn.setBounds(30, 20, 320, 70);
 
-        routine_btn.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        routine_btn.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         routine_btn.setText("Routine");
         routine_btn.setBorder(null);
         getContentPane().add(routine_btn);
-        routine_btn.setBounds(410, 40, 75, 30);
+        routine_btn.setBounds(410, 40, 90, 30);
 
-        notice_btn.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        notice_btn.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         notice_btn.setText("Notices");
         notice_btn.setBorder(null);
         notice_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -67,9 +65,9 @@ public class admin_dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(notice_btn);
-        notice_btn.setBounds(550, 40, 75, 30);
+        notice_btn.setBounds(550, 40, 90, 30);
 
-        quiz_btn.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        quiz_btn.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         quiz_btn.setText("Quiz");
         quiz_btn.setBorder(null);
         quiz_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -78,9 +76,9 @@ public class admin_dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(quiz_btn);
-        quiz_btn.setBounds(690, 40, 75, 30);
+        quiz_btn.setBounds(690, 40, 110, 30);
 
-        attandance_btn.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        attandance_btn.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         attandance_btn.setText("Attandance");
         attandance_btn.setBorder(null);
         attandance_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -89,13 +87,13 @@ public class admin_dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(attandance_btn);
-        attandance_btn.setBounds(980, 40, 100, 30);
+        attandance_btn.setBounds(1020, 40, 110, 30);
 
-        calender_btn.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        calender_btn.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         calender_btn.setText("Calender");
         calender_btn.setBorder(null);
         getContentPane().add(calender_btn);
-        calender_btn.setBounds(840, 40, 80, 30);
+        calender_btn.setBounds(870, 40, 100, 30);
 
         profile_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/profil.png"))); // NOI18N
         profile_btn.setBorder(null);
