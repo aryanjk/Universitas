@@ -19,7 +19,7 @@ public class Student{
 	private String security_qn;
 	private String security_ans;
 
-	public Student(String f_name, String l_name, String email, int std_contact, String parents_name, String parent_contact, String password, String dob, String security_qn, String security_ans) {
+	public Student(int std_contact, int par1, String f_name, String l_name, String email, String parents_name, int password, String parent_contact, int security_qn, int security_ans) {
 		this.f_name = f_name;
 		this.l_name = l_name;
 		this.email = email;

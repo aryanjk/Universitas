@@ -26,8 +26,8 @@ public class StudentController {
         return result;
     }
     
-    public int delete(Student student){
-        String email = student.getEmail();
+    public int deleteDoctor(Student student){
+        int email = student.getEmail();
         String deleteQuery = "delete from student where email='"+email+"'";
         dbConnection = new DbConnection();
         int result = dbConnection.manipulate(deleteQuery);

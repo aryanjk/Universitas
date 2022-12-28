@@ -2,6 +2,8 @@ package View;
 
 import javax.swing.*;
 import Controller.Controller;
+import Controller.StudentController;
+import Model.Student;
 
 
 
@@ -189,14 +191,35 @@ public class Userlogin extends javax.swing.JFrame {
     }//GEN-LAST:event_Gurdian_nameActionPerformed
 
     private void delete_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_btnActionPerformed
-        JFrame frame=new JFrame("Delete account");
-        if(JOptionPane.showConfirmDialog(frame,"Are you sure you want to Delete Your Account?","Delete Account",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION)
+        String Contact=contact_number.getText();
+        String Email=email.getText();
+        String Dob = dob.getText();
+        String Gname=Gurdian_name.getText();
+        String Gcontact=guardian_contact.getText();
+      
+        
+        try{
+            
+            Student d1= new Student(0,0,Email,Contact,Gname,Gcontact, 0,Dob, 0,0);
+//            drlistcontroller 
+            StudentController sc = new StudentController();
+            int del = sc.delete(d1);
 
-        {
+                if (del > 0) {
+                    System.out.println("delete inserted");
+                } else {
+                    System.out.println("Failed to insert data");
+                }
+                JOptionPane.showMessageDialog(null, "Delete Successfull.");
+     
+            } 
+        catch (Exception e) {
+                // TODO: handle exception
+                JOptionPane.showMessageDialog(null, e);
+                System.out.printf(null,e);
+            }
 
-            System.exit(0);
-
-        }
+        
         
     }//GEN-LAST:event_delete_btnActionPerformed
 

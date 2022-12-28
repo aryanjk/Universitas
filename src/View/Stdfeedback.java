@@ -121,6 +121,16 @@ public class Stdfeedback extends javax.swing.JFrame {
     private void SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitActionPerformed
         String Name = Nme.getText();
         String Description = fdb.getText();
+        int a=0;
+        if(Name.equals("")){
+            JOptionPane.showMessageDialog(null,"Name is missing");
+            a=1;
+        }
+        if(Description.equals("")){
+            JOptionPane.showMessageDialog(null,"Description is missing");
+            a=1;
+        }
+        if(a==0){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://db4free.net:3306/universitas","universitas","30dc48eb");
@@ -131,8 +141,12 @@ public class Stdfeedback extends javax.swing.JFrame {
             con.close();
             
         }catch(Exception e){
+            JOptionPane.showMessageDialog(this,e);
+            
                
-        }        // TODO add your handling code here:
+        }   
+        
+        }// TODO add your handling code here:
     }//GEN-LAST:event_SubmitActionPerformed
 
     private void NmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NmeActionPerformed
