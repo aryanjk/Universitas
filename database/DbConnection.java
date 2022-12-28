@@ -1,4 +1,4 @@
-package database;
+package Database;
 
 import javax.swing.*;
 
@@ -18,15 +18,15 @@ public class DbConnection {
 
         try {
 
-            String username = "sql6580070";
+            String username ="universitas" ;
 
-            String password = "6VVrAkhI5w";
+            String password = "31dc48eb";
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             connection = DriverManager.getConnection(
 
-                    "jdbc:mysql://sql6.freesqldatabase.com:3306/sql6580070", username, password);
+                      "jdbc:mysql://db4free.net:3306/universitas", username, password);
 
             if (connection != null) {
 
