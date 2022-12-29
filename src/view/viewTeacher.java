@@ -1,3 +1,5 @@
+package view;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -56,10 +58,7 @@ public class viewTeacher extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1512, 982));
-        setPreferredSize(new java.awt.Dimension(1512, 982));
         getContentPane().setLayout(null);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Desktop\\logo 1.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(610, 10, 320, 70);
 
@@ -74,28 +73,16 @@ public class viewTeacher extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(1340, 23, 170, 50);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\ViewTeachers\\src\\Ellipse 2.png")); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(80, 210, 80, 100);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\ViewTeachers\\src\\Ellipse 2.png")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(590, 220, 80, 70);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\ViewTeachers\\src\\Ellipse 2.png")); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(1100, 220, 80, 71);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\ViewTeachers\\src\\Ellipse 2.png")); // NOI18N
+        jLabel4.setBounds(1100, 220, 80, 0);
         getContentPane().add(jLabel5);
         jLabel5.setBounds(600, 620, 80, 90);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\ViewTeachers\\src\\Ellipse 2.png")); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(80, 610, 73, 90);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ellipse 2.png"))); // NOI18N
+        jLabel6.setBounds(80, 610, 0, 90);
         getContentPane().add(jLabel7);
         jLabel7.setBounds(1110, 620, 80, 80);
 
@@ -194,7 +181,6 @@ public class viewTeacher extends javax.swing.JFrame {
         getContentPane().add(jLabel26);
         jLabel26.setBounds(1210, 740, 90, 17);
 
-        bgimage.setIcon(new javax.swing.ImageIcon("C:\\Users\\krishal\\OneDrive\\Documents\\NetBeansProjects\\ViewTeachers\\src\\Frame 8.png")); // NOI18N
         bgimage.setMaximumSize(new java.awt.Dimension(1952, 982));
         bgimage.setMinimumSize(new java.awt.Dimension(1952, 982));
         bgimage.setPreferredSize(new java.awt.Dimension(1952, 982));
